@@ -1,11 +1,72 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
+    <meta name="description" content="Recruitment task">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>[Name] [Surname] - Recruitment task</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Maciej Mielczarek - Recruitment task</title>
+    <link rel="stylesheet" href="dist/main.css">
 </head>
 <body>
+    <section>
+        <div class="container" id="media-counter-wrapper">
 
+        </div>
+    </section>
+
+    <div class="popup" id="popup-wrapper">
+
+    </div>
+
+    <script id="media-template" type="text/x-handlebars-template">
+        <article class="media">
+            <figure class="media__photo-wrapper">
+                <img src="images/{{photoFileName}}" alt="{{photoAlt}}" class="media__photo">
+            </figure>
+            <div class="media__content-wrapper">
+                <div class="media__content">
+                    <h2 class="media__header">
+                        {{title}}
+                    </h2>
+                    <p class="media__text">
+                        {{text}}
+                    </p>
+                    <button class="media__button">
+                        {{buttonText}}
+                    </button>
+                </div>
+            </div>
+        </article>
+    </script>
+
+    <script id="counter-popup-template" type="text/x-handlebars-template">
+        <div class="popup__container">
+            <article class="popup__message">
+                <h3 class="popup__header">
+                    Alert!
+                </h3>
+                <p class="popup__text">
+                    <span>
+                        You have clicked
+                    </span>
+                    <strong>
+                        {{counter}} times
+                    </strong>
+                    <span>
+                        to related button.
+                    </span>
+                </p>
+                <button class="popup__button">
+                    Reset
+                </button>
+            </article>
+            <div class="popup__closing-cross">X</div>
+            <div class="popup__shell"></div>
+        </div>
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="dist/main.js" type="module"></script>
 </body>
