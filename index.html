@@ -16,8 +16,10 @@
         </div>
     </section>
 
-    <div class="popup" id="popup-wrapper">
+    <div class="popup">
+      <div class="popup__container" id="popup-wrapper">
 
+      </div>
     </div>
 
     <script id="media-template" type="text/x-handlebars-template">
@@ -42,29 +44,25 @@
     </script>
 
     <script id="counter-popup-template" type="text/x-handlebars-template">
-        <div class="popup__container">
-            <article class="popup__message">
-                <h3 class="popup__header">
-                    Alert!
-                </h3>
-                <p class="popup__text">
-                    <span>
-                        You have clicked
-                    </span>
-                    <strong>
-                        {{counter}} times
-                    </strong>
-                    <span>
-                        to related button.
-                    </span>
-                </p>
-                <button class="popup__button">
-                    Reset
-                </button>
-            </article>
-            <div class="popup__closing-cross">X</div>
-            <div class="popup__shell"></div>
-        </div>
+        <article class="popup__message">
+            <h3 class="popup__header">
+                Alert!
+            </h3>
+            <p class="popup__text">
+                <span>
+                    You have clicked
+                </span>
+                <strong>
+                    {{counter}} times
+                </strong>
+                <span>
+                    to related button.
+                </span>
+            </p>
+            <button class="popup__button">
+                Reset
+            </button>
+        </article>
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>

@@ -2,7 +2,6 @@ const { src, dest, watch, series, parallel } = require('gulp');
 
 const sourcemaps = require('gulp-sourcemaps');
 const sass = require('gulp-sass');
-const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
@@ -29,7 +28,6 @@ function jsTask(){
     return src([
         files.jsPath
         ])
-        .pipe(concat('all.js'))
         .pipe(uglify())
         .pipe(dest('dist')
     );
