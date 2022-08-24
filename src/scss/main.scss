@@ -1,33 +1,6 @@
 @import 'normalize';
+@import 'settings';
+@import 'global';
+@import 'media';
+@import 'popup';
 
-
-.popup__button {
-  display: none;
-
-  &.active {
-    display: initial;
-  }
-}
-
-.popup__container {
-  position:relative;
-}
-
-.popup__closing-cross {
-  position: absolute;
-  right: 20px;
-  top: 0;
-  font-size: 20px;
-  cursor: pointer;
-
-  &:after {
-    display: inline-block;
-    content: "\00d7";
-  }
-}
-
-.popup__shell {
-  height: 100px;
-  cursor:pointer;
-  border: 1px solid black;
-}

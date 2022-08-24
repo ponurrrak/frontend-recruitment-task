@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Maciej Mielczarek - Recruitment task</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="dist/main.css">
 </head>
 <body>
@@ -17,9 +20,11 @@
     </section>
 
     <div class="popup">
-      <div class="popup__container" id="popup-wrapper">
+        <div class="popup__container" id="popup-wrapper">
+          <div class="popup__cross-mark"></div>
 
-      </div>
+        </div>
+        <div class="popup__overlay"></div>
     </div>
 
     <script id="media-template" type="text/x-handlebars-template">
@@ -44,11 +49,11 @@
     </script>
 
     <script id="counter-popup-template" type="text/x-handlebars-template">
-        <article class="popup__message">
-            <h3 class="popup__header">
+        <article class="popup-content">
+            <h2 class="popup-content__header">
                 Alert!
-            </h3>
-            <p class="popup__text">
+            </h2>
+            <p class="popup-content__text">
                 <span>
                     You have clicked
                 </span>
@@ -59,7 +64,7 @@
                     to related button.
                 </span>
             </p>
-            <button class="popup__button">
+            <button class="popup-content__button">
                 Reset
             </button>
         </article>

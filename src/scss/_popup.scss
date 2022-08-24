@@ -1,0 +1,84 @@
+.popup {
+  position: relative;
+  display: none;
+
+  &.active {
+    display: block;
+  }
+
+  &__container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(min(64vw, 57.5em));
+    background-color: $color-light;
+    padding: 3.5em calc(min(5.9375em, 11%));
+    z-index: 99;
+  }
+
+  &__overlay {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: $color-dark;
+    opacity: 0.5;
+  }
+
+  &__cross-mark {
+    position: absolute;
+    height: 0.75em;
+    width: 0.125em;
+    background-color: $color-dark;
+    transform: rotate(45deg);
+    right: 2.875em;
+    top: 2.875em;
+    cursor: pointer;
+    transition: all .5s;
+
+    &:hover {
+      transform: rotate(45deg) scale(2);
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 0.75em;
+      height: 0.125em;
+      background-color: $color-dark;
+      left: -0.3125em;
+      top: 0.3125em;
+    }
+  }
+}
+
+.popup-content {
+
+  &__header {
+    @include header-h2();
+    margin-bottom: 0.57em;
+  }
+
+  &__text {
+    @include paragraph();
+
+    strong {
+      font-weight: $font-semibold;
+    }
+  }
+
+  &__button {
+    @include button();
+    display: none;
+
+    &.active {
+      display: initial;
+    }
+
+    &:hover {
+      @include button-hover();
+    }
+  }
+}

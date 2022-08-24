@@ -5,7 +5,7 @@ import Component from './component.js';
 class Media extends Component {
   constructor(wrapperSelector, eventToEmit, endpoint='') {
     super(wrapperSelector, select.templateOf.media);
-    this.endpoint = endpoint;
+    this.endpoint = endpoint;  // for future use
     this.eventToEmit = eventToEmit;
     this.initialize();
   }

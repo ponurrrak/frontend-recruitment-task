@@ -1,1 +1,1 @@
-class Component{constructor(e,t){this.wrapper=document.querySelector(e),this.template=Handlebars.compile(document.querySelector(t).innerHTML)}render(e){e=this.template(e).trim();this.wrapper.innerHTML=e}}export default Component;
+class Component{constructor(e,t){this.wrapper=document.querySelector(e),this.template=Handlebars.compile(document.querySelector(t).innerHTML)}render(e,t=null){e=this.template(e).trim();t?this.wrapper.insertAdjacentHTML(t,e):this.wrapper.innerHTML=e}}export default Component;

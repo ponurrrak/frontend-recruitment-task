@@ -8,8 +8,8 @@ export const select = {
     counterPopup: '#counter-popup-template',
   },
   popup: {
-    closingCounterElems: '.popup__closing-cross, .popup__shell',
-    resetCounterButton: '.popup__button',
+    closingCounterElems: '.popup__cross-mark, .popup__overlay',
+    resetCounterButton: '.popup-content__button',
   }
 };
 
@@ -19,8 +19,6 @@ export const eventName = {
 
 export const className = {
   active: 'active',
-  popupShell: 'popup__shell',
-  popupClosingCross: 'popup__closing-cross',
 };
 
 

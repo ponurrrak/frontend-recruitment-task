@@ -1,0 +1,46 @@
+/* Variables */
+
+$color-dark: #121212;
+$color-light: #fff;
+$color-primary: #E4C1AE;
+$color-danger: #C1937B;
+
+$font-text: 'Roboto', sans-serif;
+$font-light: 300;
+$font-semibold: 600;
+$font-bold: 700;
+$font-size-header: 2.625rem;
+
+$line-height-text: 1.5;
+$line-height-header: 1.2;
+
+
+/* Mixins */
+
+@mixin header-h2(){
+  font-size: $font-size-header;
+  font-weight: $font-bold;
+  line-height: $line-height-header;
+  margin-top: 0;
+}
+
+@mixin paragraph(){
+  margin-top: 0;
+  margin-bottom: 2em;
+}
+
+@mixin button(){
+  background-color: $color-primary;
+  border: none;
+  border-radius: 32px;
+  padding: 1em 2.5em;
+  text-align: center;
+  font-weight: $font-bold;
+  line-height: 1;
+  color: $color-light;
+  cursor: pointer;
+}
+
+@mixin button-hover {
+  background-color: $color-danger;
+}

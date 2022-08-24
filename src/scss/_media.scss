@@ -1,0 +1,55 @@
+.media {
+  max-width: 63.75em;
+  margin: 0 auto;
+  padding: 0 1.25em;
+
+  &__photo-wrapper {
+    height: 20.625em;
+    margin: 0 0 5.9375em;
+  }
+
+  &__photo {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__header {
+    @include header-h2();
+    margin-bottom: 0.33em;
+  }
+
+  &__text {
+    @include paragraph();
+  }
+
+  &__button {
+    @include button();
+
+    &:hover {
+      @include button-hover();
+    }
+  }
+}
+
+@media (min-width: 768px) {
+
+  .media {
+    display: flex;
+    justify-content: space-between;
+
+    &__photo-wrapper {
+      flex-basis: 51.53%;
+      margin: 0;
+    }
+
+    &__content-wrapper {
+      flex-basis: 38.78%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+}
+
+

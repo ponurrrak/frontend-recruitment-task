@@ -4,6 +4,7 @@ import Component from './component.js';
 class Popup extends Component {
   constructor(templateSelector, eventToCapture, closingSelectors){
     super(select.wrapperOf.popup, templateSelector);
+    this.wrapperParent = this.wrapper.parentElement;
     this.closingSelectors = closingSelectors;
     this.closePopup = this.closePopup.bind(this);
     document.addEventListener(eventToCapture, async evt => {  // other popups may require data transmitted through event object
@@ -16,17 +17,11 @@ class Popup extends Component {
     return {};
   }
   render(data){
-    super.render(data);
-    this.addPopupChild(className.popupShell);
-    this.addPopupChild(className.popupClosingCross);
-  }
-  addPopupChild(className){
-    const newElement = document.createElement('div');
-    newElement.classList.add(className);
-    this.wrapper.appendChild(newElement);
+    super.render(data, 'beforeEnd');
+    this.wrapperParent.classList.add(className.active);
   }
   initActions(){
-    this.closingElements = this.wrapper.querySelectorAll(this.closingSelectors);
+    this.closingElements = this.wrapperParent.querySelectorAll(this.closingSelectors);
     for(const closingElement of this.closingElements){
       closingElement.addEventListener('click', this.closePopup);
     }
@@ -35,7 +30,8 @@ class Popup extends Component {
     for(const closingElement of this.closingElements){
       closingElement && closingElement.removeEventListener('click', this.closePopup);
     }
-    this.wrapper.innerHTML = '';
+    this.wrapper.removeChild(this.wrapper.lastChild);
+    this.wrapperParent.classList.remove(className.active);
   }
 }
 

@@ -3,9 +3,12 @@ class Component {
     this.wrapper = document.querySelector(wrapperSelector);
     this.template = Handlebars.compile(document.querySelector(templateSelector).innerHTML);
   }
-  render(data) {
+  render(data, position=null) {
     const generatedHTML = this.template(data).trim();
-    this.wrapper.innerHTML = generatedHTML;
+    position ?
+      this.wrapper.insertAdjacentHTML(position, generatedHTML)
+      :
+      (this.wrapper.innerHTML = generatedHTML);
   }
 }
 
