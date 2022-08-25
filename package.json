@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "run-p gulp browsersync",
-    "browsersync": "browser-sync start --server --files \"dist/*.css\" \"dist/*.js\" \"*.html\"",
+    "browsersync": "browser-sync start --server --files \"data/*.js\" \"dist/**/*.css\" \"dist/**/*.js\" \"*.html\"",
     "gulp": "gulp"
   },
   "author": "",

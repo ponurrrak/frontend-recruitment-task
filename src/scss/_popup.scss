@@ -29,27 +29,27 @@
 
   &__cross-mark {
     position: absolute;
-    height: 0.75em;
+    height: 1.06em;
     width: 0.125em;
     background-color: $color-dark;
     transform: rotate(45deg);
-    right: 2.875em;
-    top: 2.875em;
+    right: 3.25em;
+    top: 2.72em;
     cursor: pointer;
     transition: all .5s;
 
     &:hover {
-      transform: rotate(45deg) scale(2);
+      transform: rotate(45deg) scale(1.5);
     }
 
     &:after {
       content: '';
       position: absolute;
-      width: 0.75em;
+      width: 1.06em;
       height: 0.125em;
       background-color: $color-dark;
-      left: -0.3125em;
-      top: 0.3125em;
+      left: -0.468em;
+      top: 0.468em;
     }
   }
 }
@@ -58,7 +58,6 @@
 
   &__header {
     @include header-h2();
-    margin-bottom: 0.57em;
   }
 
   &__text {

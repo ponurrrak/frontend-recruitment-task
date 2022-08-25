@@ -22,14 +22,16 @@ $line-height-header: 1.2;
   font-weight: $font-bold;
   line-height: $line-height-header;
   margin-top: 0;
+  margin-bottom: 0.57em;
 }
 
-@mixin paragraph(){
+@mixin paragraph() {
   margin-top: 0;
-  margin-bottom: 2em;
+  margin-bottom: 0;
 }
 
 @mixin button(){
+  margin-top: 2em;
   background-color: $color-primary;
   border: none;
   border-radius: 32px;
