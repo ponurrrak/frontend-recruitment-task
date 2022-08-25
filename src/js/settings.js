@@ -1,20 +1,20 @@
 export const select = {
   wrapperOf: {
-    popup: '#popup-wrapper',
+    modal: '#modal-wrapper',
     mediaCounter: '#media-counter-wrapper',
   },
   templateOf: {
     media: '#media-template',
-    counterPopup: '#counter-popup-template',
+    counterModal: '#counter-modal-template',
   },
-  popup: {
-    closingCounterElems: '.popup__cross-mark, .popup__overlay',
-    resetCounterButton: '.popup-content__button',
+  modal: {
+    closingCounterElems: '.modal__cross-mark, .modal__overlay',
+    resetCounterButton: '.modal-content__button',
   }
 };
 
 export const eventName = {
-  openCounterPopup: 'openCounterPopup',
+  openCounterModal: 'openCounterModal',
 };
 
 export const className = {
